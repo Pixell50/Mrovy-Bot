@@ -1,30 +1,129 @@
-# Hello website!
+Bot Altyapı Projesine Hoşgeldin!
+=================
+Merhaba Arkadaşlar Bu Altyapı 2018 Yılında Yapılmış 2021 Yılında İse Gerekli Düzeltmeleri Yapılmıştır. Bu Altyapı Discord.js v12 Sürümünü Artık Desteklemektedir! Kolaylıkla Kullanabilirsiniz!
 
-This is a basic HTML starter project you can build on however you like. No need to save. While you develop your site, your changes will happen ✨ immediately in the preview window. On the left you'll see the files that make up your site, including HTML, JavaScript, and CSS. You can upload assets like images or audio in `assets`. The rest is up to you and your imagination. 🦄
+[Resmi Discord Sunucumuz](https://discord.gg/Zwr4MqyKrC)
 
-## What's in this project?
+[Resmi Youtube Kanalımız](https://www.youtube.com/channel/UCVRhrcoG6FOvHGKehYtvKHg?view_as=subscriber)
 
-← `README.md`: That's this file, where you can tell people what your cool website does and how you built it.
+[Resmi İnstagram Hesabımız](https://www.instagram.com/emirhansarac06/)
 
-← `index.html`: This is the main web page for your site. The HTML defines the structure and content of the page using _elements_. You'll see references in the HTML to the JS and CSS files. Try clicking the image in the center of the page!
+Diğer Altyapılar!
+=================
+[Ayarlanabilen Emoji ile Rol Verme Altyapısı](https://www.youtube.com/watch?v=c715ki9tV8g)
 
-← `style.css`: CSS files add styling rules to your content. The CSS applies styles to the elements in your HTML page. The style rules also make the image move when you click it.
+[Kayıt Botu Altyapısı](https://www.youtube.com/watch?v=0ciAxO0k35g)
 
-← `script.js`: If you're feeling fancy you can add interactivity to your site with JavaScript. The code in the JavaScript file runs when the page loads, and when the visitor clicks the button you can add below.
+[Müzik Botu Altyapısı](https://youtu.be/tJIDkr2gtpQ)
 
-Open each file and check out the comments (in gray) for more info.
+[Davet Botu Altyapısı](https://www.youtube.com/watch?v=FsYR6egP0PU)
 
-## Try this next 🏗️
+[Captcha Botu Altyapısı](https://youtu.be/3UQMNEuLY64)
 
-Take a look in `TODO.md` for next steps you can try out in your new site!
+[Slash Bot Altyapısı](https://youtu.be/ZKjBYsFnYls)
 
-___Want a minimal version of this project to build your own website? Check out [Blank Website](https://glitch.com/edit/#!/remix/glitch-blank-website)!___
+[Yönetim Panelli Bot Altyapısı](https://github.com/EmirhanSarac/discord-bot-dashboard)
 
-![Glitch](https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2FLogo_Color.svg?v=1602781328576)
+Basit Hatalar ve Çözümleri!
+=================
+1 • Eğer hatanız;
+`Cannot find module 'blabla'`
+şeklindeyse modül kurmanız gerekmektedir.
+Modül kurmak için konsolu açıp `npm i blabla` yazınız.
+Glitch kullanıyorsanız basit kurulum yolu;
+1 • Package.json'a girin.
+2 • Yukarıdan Add Package basın.
+3 • İnmesi gereken paket ismini yazın ve çıkana basın.
+başarılı! 
 
-## You built this with Glitch!
+2 • Eğer hatanız;
+`ayarlar is not defined:`
+şeklindeyse hatayı aldığınız komutun en üstüne alttaki kodu girmeniz gerekli:
+`const ayarlar = require('../ayarlar.json')`
+ yazın, sorun çözülecektir.
+ 
 
-[Glitch](https://glitch.com) is a friendly community where millions of people come together to build web apps and websites.
+ 3 • Eğer hatanız;
+`SyntaxError: Unexpected token };`
+Tarzında bir hata alıyorsanız, açıp kapatmadığınız veya kapatıp açmadığın bir paranteziniz vardır demek. Çözmek için hata oluşmadan önce en son eklediğiniz komuta bi' göz gezdirmek. Sorunu bulduğunuz zaman parantezleri düzelttiğinizde sorunda ortadan kalkar.
+ 
+4 • Eğer hatanız; 
+`(node:6660) UnhandlePromiseRejectionWarning: Error: Incorrect login details were provided.`
+Tarzında ki bir token hatasında yapmanız gereken tek şey, https://discord.com/developers/applications sayfasına girip botunuza giriş yapmak, tokeninizi oradan kopyalayıp projenizde ki token gerektiren yere doğru bir şekilde "" içinde yapıştırın.
+ 
+5 • Eğer hatanız; 
+`fields.flat is not a function`
+İse Node versiyonunuzu 12x yapın.
+ 
+6 • Eğer Hatanız;
+`(node:223) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'id' of null`
+Şeklindeyse `if (!message.guild) return;` Komutun Başına Yazarak Çözebilirsiniz
 
-- Need more help? [Check out our Help Center](https://help.glitch.com/) for answers to any common questions.
-- Ready to make it official? [Become a paid Glitch member](https://glitch.com/pricing) to boost your app with private sharing, more storage and memory, domains and more.
+7 • Eğer Hatanız;
+`TypeError: Cannot read property 'send' of undefined`
+Şeklindeyse Bot mesajı atacak bir kanalı bulamayınca yukarıda ki hatayı verir. Log kısmına bakıp hangi komutta hangi kanalın ayarlı olmadığını kontrol edin.
+
+8 • Eğer Hatanız;
+`maxListeners`
+ Hatanız da yukarıda ki gibi maxListeners geçiyor ise main dosyanızın bir bölümüne `client.setMaxListeners(30)` yazın. Sorun çözülecektir, çözülmez ise fazla client.on eventlerini silin.
+ 
+9 • Eğer Hatanız;
+`DeprecationWarning:TextChannel#sendEmbed: use TextChannel#send instead`
+Bu uyarıyı verdiği zaman `<channel>.sendEmbed` eventini `<channel>.send` yapmanız gerekir
+
+10 • Eğer Böyle Bir Yazı Alıyorsanız;
+`DeprecationWarning: Collection#find: pass a function instead`
+Bu bir hata değil uyarıdır yapmanız gereken;
+`<collection>.find('name', 'isim')`
+Kodlarını
+`<collection>.find(x => x.name == 'name')`
+Şeklinde kullanırsanız sorun düzelecektir (Örnektir.)
+
+ 11 • Eğer Hatanız;
+`UnhandledPromiseRejectionWarning: DiscordAPIError: Missing Permissions`
+Bu şekilde bir hata alıyorsanız bota uygulatmaya çalıştırdığınız işleme botun yetkisi yetmiyordur vereceğim kodu main dosyanıza atarak sorunu çözebilirsiniz.
+ 
+ 12 • Eğer Hatanız;
+`Something took to long to do` 
+Bu hatanın nedeni: Bir gün içerisinde 1000 defa botunuz tokene bağlantı kurduğu halinde veya Glitch, Heroku vb. sitelerde kullanıyorsanız bazenleri bu sitelerde 'tokeni kötüye kullanan' IP Ban yiyor ve çoğu proje remixleseniz dahi token ban yiyor. 
+Çözümü: 1-2 gün civarı bu böyle devam edebilir. İP Ban yemiş projeyi bulmanız gerek bu projeyi bulduğunuzda remixleyin hatanız düzelir.
+ 
+
+`İyi Kullanımlar!`
+
+Etiketler: discord bot altyapı glitch
+discord bot altyapı github
+discord bot altyapı 2020
+discord bot altyapı v12
+discord bot altyapısı glitch
+discord bot altyapı 2021
+discord bot altyapı visual studio code
+discord bot altyapı nasıl yapılır
+discord altyapı
+discord ban bot altyapı
+bot altyapı
+discord destek bot altyapı
+discord bot altyapısı github
+discord eğlence bot altyapı
+discord müzik bot altyapı glitch
+discord guard bot altyapı
+discord gif bot altyapı
+discord groovy bot altyapı
+discord nitro generator bot altyapı
+discord bot hazır altyapı
+discord bot hazır altyapı glitch
+discord bot yapma hazır altyapı
+discord bot altyapı indir
+discord invite bot altyapı
+discord.js bot altyapı
+discord kayıt bot altyapı
+discord bot list altyapı
+discord müzik bot altyapı
+discord moderasyon bot altyapı
+discord public bot altyapı
+discord register bot altyapı
+discord stat bot altyapı
+emirhan saraç discord bot altyapı
+discord hazır bot komutları
+discord uptime bot altyapı
+
