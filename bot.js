@@ -37,7 +37,7 @@ client.on("message", message => {
 client.on("ready", () => {
   console.log(`Bütün komutlar başarıyla yüklendi!`);
   client.user.setStatus("idle");
-  client.user.setActivity(`ogünsertkobs`); //botun oynuyor kısmı
+  client.user.setActivity(`miyav !p`); //botun oynuyor kısmı
   console.log(`Bot AKTİF! Şu an ` + client.channels.size + ` adet kanala, ` + client.guilds.size + ` adet sunucuya ve ` + client.guilds.reduce((a, b) => a + b.memberCount, 0).toLocaleString() + ` kullanıcıya hizmet veriliyor!`);
 })
 
