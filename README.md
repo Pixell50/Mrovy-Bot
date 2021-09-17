@@ -1,129 +1,50 @@
-Bot Altyapı Projesine Hoşgeldin!
-=================
-Merhaba Arkadaşlar Bu Altyapı 2018 Yılında Yapılmış 2021 Yılında İse Gerekli Düzeltmeleri Yapılmıştır. Bu Altyapı Discord.js v12 Sürümünü Artık Desteklemektedir! Kolaylıkla Kullanabilirsiniz!
+<h1 align="center"><img src="./assets/logo.gif" width="30px"> Discord Music Bot <img src="./assets/logo.gif" width="30px"></h1>
+<p align="center">Thanks for 25k Views with 500 subs!</p>
 
-[Resmi Discord Sunucumuz](https://discord.gg/Zwr4MqyKrC)
+## ✨Latest Updates✨
 
-[Resmi Youtube Kanalımız](https://www.youtube.com/channel/UCVRhrcoG6FOvHGKehYtvKHg?view_as=subscriber)
+> **DISCORD.JS v13 WILL BREAK THIS BOT. DO NOT USE IT UNTIL v5 IS OUT.**
+>
+> **VERSION 5 OF THIS BOT HAS NO RELEASE DATE**
 
-[Resmi İnstagram Hesabımız](https://www.instagram.com/emirhansarac06/)
+## ❗Prerequisites❗
+- [Node.js 14+](https://nodejs.org/en/download/)
+- discord.js@12.5.3
+- [Lavalink Server](https://github.com/freyacodes/Lavalink#server-configuration)
 
-Diğer Altyapılar!
-=================
-[Ayarlanabilen Emoji ile Rol Verme Altyapısı](https://www.youtube.com/watch?v=c715ki9tV8g)
+**DO NOT JOIN OUR DISCORD FOR LAVALINK ISSUES**
 
-[Kayıt Botu Altyapısı](https://www.youtube.com/watch?v=0ciAxO0k35g)
+> NOTE: Lavalink is needed for music functionality. You need to have a working Lavalink server to make the bot work.
 
-[Müzik Botu Altyapısı](https://youtu.be/tJIDkr2gtpQ)
 
-[Davet Botu Altyapısı](https://www.youtube.com/watch?v=FsYR6egP0PU)
+## 📝 Tutorial
 
-[Captcha Botu Altyapısı](https://youtu.be/3UQMNEuLY64)
+A Tutorial has been uploaded on YouTube, Watch it by clicking [here](https://www.youtube.com/watch?v=p4lP96Tiv9s)
 
-[Slash Bot Altyapısı](https://youtu.be/ZKjBYsFnYls)
+## 📝 [Support Server](https://discord.gg/sbySMS7m3v)
 
-[Yönetim Panelli Bot Altyapısı](https://github.com/EmirhanSarac/discord-bot-dashboard)
+### **DO NOT JOIN OUR DISCORD FOR DASHBOARD ISSUES AND LAVALINK ISSUES. WE WILL NOT HELP YOU.**
 
-Basit Hatalar ve Çözümleri!
-=================
-1 • Eğer hatanız;
-`Cannot find module 'blabla'`
-şeklindeyse modül kurmanız gerekmektedir.
-Modül kurmak için konsolu açıp `npm i blabla` yazınız.
-Glitch kullanıyorsanız basit kurulum yolu;
-1 • Package.json'a girin.
-2 • Yukarıdan Add Package basın.
-3 • İnmesi gereken paket ismini yazın ve çıkana basın.
-başarılı! 
+If you have major coding issues with this bot, please join and ask for help.
 
-2 • Eğer hatanız;
-`ayarlar is not defined:`
-şeklindeyse hatayı aldığınız komutun en üstüne alttaki kodu girmeniz gerekli:
-`const ayarlar = require('../ayarlar.json')`
- yazın, sorun çözülecektir.
- 
+## 📸 Screenshots
 
- 3 • Eğer hatanız;
-`SyntaxError: Unexpected token };`
-Tarzında bir hata alıyorsanız, açıp kapatmadığınız veya kapatıp açmadığın bir paranteziniz vardır demek. Çözmek için hata oluşmadan önce en son eklediğiniz komuta bi' göz gezdirmek. Sorunu bulduğunuz zaman parantezleri düzelttiğinizde sorunda ortadan kalkar.
- 
-4 • Eğer hatanız; 
-`(node:6660) UnhandlePromiseRejectionWarning: Error: Incorrect login details were provided.`
-Tarzında ki bir token hatasında yapmanız gereken tek şey, https://discord.com/developers/applications sayfasına girip botunuza giriş yapmak, tokeninizi oradan kopyalayıp projenizde ki token gerektiren yere doğru bir şekilde "" içinde yapıştırın.
- 
-5 • Eğer hatanız; 
-`fields.flat is not a function`
-İse Node versiyonunuzu 12x yapın.
- 
-6 • Eğer Hatanız;
-`(node:223) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'id' of null`
-Şeklindeyse `if (!message.guild) return;` Komutun Başına Yazarak Çözebilirsiniz
+<div align="left"><img src="/assets/Screenshot_1.png"></div><div align="center"><img src="/assets/Screenshot_2.png"></div><div align="right"><img src="/assets/Screenshot_3.png"></div>
 
-7 • Eğer Hatanız;
-`TypeError: Cannot read property 'send' of undefined`
-Şeklindeyse Bot mesajı atacak bir kanalı bulamayınca yukarıda ki hatayı verir. Log kısmına bakıp hangi komutta hangi kanalın ayarlı olmadığını kontrol edin.
+<div align="center"><img src="/assets/Features.png"></div>
 
-8 • Eğer Hatanız;
-`maxListeners`
- Hatanız da yukarıda ki gibi maxListeners geçiyor ise main dosyanızın bir bölümüne `client.setMaxListeners(30)` yazın. Sorun çözülecektir, çözülmez ise fazla client.on eventlerini silin.
- 
-9 • Eğer Hatanız;
-`DeprecationWarning:TextChannel#sendEmbed: use TextChannel#send instead`
-Bu uyarıyı verdiği zaman `<channel>.sendEmbed` eventini `<channel>.send` yapmanız gerekir
+## 💨 Run the projects
 
-10 • Eğer Böyle Bir Yazı Alıyorsanız;
-`DeprecationWarning: Collection#find: pass a function instead`
-Bu bir hata değil uyarıdır yapmanız gereken;
-`<collection>.find('name', 'isim')`
-Kodlarını
-`<collection>.find(x => x.name == 'name')`
-Şeklinde kullanırsanız sorun düzelecektir (Örnektir.)
+[![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/import/github/SudhanPlayz/Discord-MusicBot)
+[![Run on Repl.it](https://repl.it/badge/github/SudhanPlayz/Discord-MusicBot)](https://repl.it/github/SudhanPlayz/Discord-MusicBot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/SudhanPlayz/Discord-MusicBot)
 
- 11 • Eğer Hatanız;
-`UnhandledPromiseRejectionWarning: DiscordAPIError: Missing Permissions`
-Bu şekilde bir hata alıyorsanız bota uygulatmaya çalıştırdığınız işleme botun yetkisi yetmiyordur vereceğim kodu main dosyanıza atarak sorunu çözebilirsiniz.
- 
- 12 • Eğer Hatanız;
-`Something took to long to do` 
-Bu hatanın nedeni: Bir gün içerisinde 1000 defa botunuz tokene bağlantı kurduğu halinde veya Glitch, Heroku vb. sitelerde kullanıyorsanız bazenleri bu sitelerde 'tokeni kötüye kullanan' IP Ban yiyor ve çoğu proje remixleseniz dahi token ban yiyor. 
-Çözümü: 1-2 gün civarı bu böyle devam edebilir. İP Ban yemiş projeyi bulmanız gerek bu projeyi bulduğunuzda remixleyin hatanız düzelir.
- 
+## ✨ Contributors
 
-`İyi Kullanımlar!`
+Contributions are always welcomed :D Make sure to follow [Contributing.md](/CONTRIBUTING.md)
 
-Etiketler: discord bot altyapı glitch
-discord bot altyapı github
-discord bot altyapı 2020
-discord bot altyapı v12
-discord bot altyapısı glitch
-discord bot altyapı 2021
-discord bot altyapı visual studio code
-discord bot altyapı nasıl yapılır
-discord altyapı
-discord ban bot altyapı
-bot altyapı
-discord destek bot altyapı
-discord bot altyapısı github
-discord eğlence bot altyapı
-discord müzik bot altyapı glitch
-discord guard bot altyapı
-discord gif bot altyapı
-discord groovy bot altyapı
-discord nitro generator bot altyapı
-discord bot hazır altyapı
-discord bot hazır altyapı glitch
-discord bot yapma hazır altyapı
-discord bot altyapı indir
-discord invite bot altyapı
-discord.js bot altyapı
-discord kayıt bot altyapı
-discord bot list altyapı
-discord müzik bot altyapı
-discord moderasyon bot altyapı
-discord public bot altyapı
-discord register bot altyapı
-discord stat bot altyapı
-emirhan saraç discord bot altyapı
-discord hazır bot komutları
-discord uptime bot altyapı
+<a href="https://github.com/SudhanPlayz/Discord-MusicBot/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=SudhanPlayz/Discord-MusicBot" />
+</a>
 
+Made with :heart: and JavaScript!
