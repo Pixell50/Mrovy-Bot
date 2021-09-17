@@ -200,11 +200,11 @@ client.on('message', async msg => {
     .setColor('#FF0000'));
 	}
   
-  else if (command === 'lan')
+  else if (command === 'zarat')
   {
-    int zar = Math.floor(Math.random() * 10) + 1;
+    var zar = Math.floor(Math.random() * 6) + 1;
     return msg.channel.send(new Discord.RichEmbed()
-    .setTitle("ne var lan")
+    .setTitle("Gelen Sayı : " + zar)
     .setColor('#FF0000'));
     
   }
