@@ -104,7 +104,7 @@ public class BotConfig
             boolean write = false;
 
             // validate bot token
-            if(token==null || token.isEmpty() || token.equalsIgnoreCase("BOT_TOKEN_HERE"))
+            if(token==null || token.isEmpty() || token.equalsIgnoreCase("ODgyMjYyNTMwNjI0NDcxMDQw.YS41Ag.PlmU_VihDTf542wAxG8gc9RxsV0"))
             {
                 token = prompt.prompt("Please provide a bot token."
                         + "\nInstructions for obtaining a token can be found here:"
@@ -170,7 +170,7 @@ public class BotConfig
         else
         {
             bytes = original.substring(original.indexOf(START_TOKEN)+START_TOKEN.length(), original.indexOf(END_TOKEN))
-                .replace("BOT_TOKEN_HERE", token)
+                .replace("ODgyMjYyNTMwNjI0NDcxMDQw.YS41Ag.PlmU_VihDTf542wAxG8gc9RxsV0", token)
                 .replace("0 // OWNER ID", Long.toString(owner))
                 .trim().getBytes();
         }
