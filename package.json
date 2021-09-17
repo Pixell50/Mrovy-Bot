@@ -31,6 +31,7 @@
     "moment": "^2.24.0",
     "moment-duration-format": "^2.2.2",
     "ms": "^2.1.2",
+    "node-opus": "^0.3.3",
     "node-superfetch": "^0.1.9",
     "opusscript": "^0.0.8",
     "parse-ms": "^2.0.0",
@@ -44,7 +45,8 @@
     "speedtest-net": "^1.6.0",
     "table": "^5.4.6",
     "tempy": "^0.3.0",
-    "youtube-search": "^1.1.4"
+    "youtube-search": "^1.1.4",
+    "ytdl-core": "^4.9.1"
   },
   "engines": {
     "node": "11.x"
