@@ -141,26 +141,7 @@ client.on('message', async msg => {
 		serverQueue.songs = [];
 		serverQueue.connection.dispatcher.end('**Müzik Bitti**');
 		return undefined;
-	} else if (command === 'ses' || command === "volume") {
-		if (!msg.member.voiceChannel) if (!msg.member.voiceChannel) return msg.channel.send(new Discord.RichEmbed()
-    .setColor('#FF0000')
-    .setDescription('| İlk olarak sesli bir kanala giriş yapmanız gerek|'));
-		if (!serverQueue) return msg.channel.send(new Discord.RichEmbed()
-     .setColor('#FF0000')
-     .setTitle('| **Hiç Bir Müzik Çalmamakta **'));                                              
-		if (!args[1]) return msg.channel.send(new Discord.RichEmbed()
-   .setTitle(` Şuanki Ses Seviyesi: **${serverQueue.volume} **`)
-    .setColor('#FF0000'))
-		serverQueue.volume = args[1];
-    if(args[1] > 100) {
-      msg.channel.send("100'den büyük bir ses seviyesi ayarlanamaz!")
-    } else {
-    serverQueue.connection.dispatcher.setVolumeLogarithmic(args[1] / 5);
-		return msg.channel.send(new Discord.RichEmbed()
-    .setTitle(`Ses Seviyesi Ayarlanıyor: **${args[1]}  **`)
-    .setColor('#FF0000'));     
-    }               
-	} else if (command === 'çalan' || command === "song" || command === "current" || command === "şarkı") {
+	}  else if (command === 'çalan' || command === "song" || command === "current" || command === "şarkı") {
 		if (!serverQueue) return msg.channel.send(new Discord.RichEmbed()
     .setTitle("| **Çalan Müzik Bulunmamakta **")
     .setColor('#FF0000'));
