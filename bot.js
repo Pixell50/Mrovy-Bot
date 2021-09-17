@@ -200,6 +200,22 @@ client.on('message', async msg => {
     .setColor('#FF0000'));
 	}
   
+  else if (command === 'lan')
+  {
+    int zar = Math.floor(Math.random() * 10) + 1;
+    return msg.channel.send(new Discord.RichEmbed()
+    .setTitle("ne var lan")
+    .setColor('#FF0000'));
+    
+  }
+  
+  else if (command === 'diablo')
+  {
+    return msg.channel.send(new Discord.RichEmbed()
+    .setTitle("sikerim belanı ha yavşak")
+    .setColor('#FF0000'));
+    
+  }
 
 	return undefined;
 });
