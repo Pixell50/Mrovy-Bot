@@ -55,7 +55,8 @@ client.on('message', async msg => {
 	const serverQueue = queue.get(msg.guild.id);
 	let command = msg.content.split(' ')[0].slice(ayarlar.prefix.length);
 	//command = command.slice(prefix.length)
-
+  
+//Komutlar
 	if (command === 'çal' || command === "p" || command === "play") {
 		const voiceChannel = msg.member.voiceChannel;
 		if (!voiceChannel) return msg.channel.send(new Discord.RichEmbed()
@@ -216,6 +217,28 @@ client.on('message', async msg => {
     .setColor('#FF0000'));
     
   }
+  
+  else if (command === 'yazıtura')
+  {
+    var sayi = Math.floor(Math.random() * 2) + 1;
+    
+    if (sayi === 1) {
+    return msg.channel.send(new Discord.RichEmbed()
+    .setTitle("Yazı Geldi")
+    .setColor('#FF0000'));
+    }
+    
+    else {
+      
+      return msg.channel.send(new Discord.RichEmbed()
+    .setTitle("Tura Geldi")
+    .setColor('#FF0000'));
+      
+    }
+    
+  }
+  
+  //////////////////////////////////////////////////////////////////////////////
 
 	return undefined;
 });
